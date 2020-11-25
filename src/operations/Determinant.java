@@ -24,12 +24,8 @@ public class Determinant {
         if(!MatrixUtils.isSquare(matrix)) {
             System.out.println("Can calculate determinant only of square matrix");
             return Double.POSITIVE_INFINITY;
-        } else if(MatrixUtils.dimension(matrix) > 3 ){
-            System.out.println("Can calculate determinant only of matrix with 3 or less dimensions");
-            System.out.println("Using LaPlace method...");
-            return Determinant.laPlace(matrix);
         }
-
+        
 
         return determinant;
     }
