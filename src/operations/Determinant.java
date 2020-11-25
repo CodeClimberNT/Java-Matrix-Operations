@@ -6,9 +6,9 @@ import controls.MatrixUtils;
 
 public class Determinant {
 
-    public static double laPlace(int[][] matrix) {
+    public static double laPlace(double[][] matrix) {
         double determinant = Double.NEGATIVE_INFINITY;
-        int subMatrix[][];
+        double subMatrix[][];
 
         if(!MatrixUtils.isSquare(matrix)) {
             System.out.println("Can calculate determinant only of square matrix");
@@ -18,15 +18,29 @@ public class Determinant {
         return determinant;
     }
 
-    public static double sarrus(int[][] matrix) {
+    public static double sarrus(double[][] matrix) {
         double determinant = Double.NEGATIVE_INFINITY;
 
         if(!MatrixUtils.isSquare(matrix)) {
             System.out.println("Can calculate determinant only of square matrix");
-            return Double.POSITIVE_INFINITY;
+            return determinant;
         }
-        
 
+        switch(MatrixUtils.dimension(matrix)) {
+            case 1:
+                determinant = matrix[0][0];
+                break;
+            case 2:
+                determinant = (matrix[0][0]*matrix[1][1]) - (matrix[0][1]*matrix[1][0]);
+                break;
+            case 3:
+                determinant = MatrixUtils.sumPositiveDiagonal(matrix) - MatrixUtils.sumNegativeDiagonal(matrix);
+                break;
+            default:
+                System.out.println("Can't use Sarrus with those dimension!");
+                break;
+        }
         return determinant;
     }
+
 }

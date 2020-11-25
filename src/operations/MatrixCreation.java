@@ -4,8 +4,8 @@ package operations;
 
 public class MatrixCreation {
 
-    public static int[][] identityMatrix(int dimension) {
-        int matrix[][] = new int[dimension][dimension];
+    public static double[][] identityMatrix(int dimension) {
+        double matrix[][] = new double[dimension][dimension];
 
         for(int i = 0; i < dimension; i++) {
             for(int j = 0; j < dimension; j++) {
@@ -19,8 +19,8 @@ public class MatrixCreation {
         return matrix;
     }
 
-    public static int[][] randomMatrix(int dimension, int value) {
-        int matrix[][] = new int[dimension][dimension];
+    public static double[][] randomMatrix(int dimension, int value) {
+        double matrix[][] = new double[dimension][dimension];
         for(int i = 0; i < dimension; i++) {
             for(int j = 0; j < dimension; j++) {
                 matrix[i][j] = (int) Math.floor(Math.random()*value);
