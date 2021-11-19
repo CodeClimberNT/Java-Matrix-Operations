@@ -2,7 +2,7 @@ package operations;
 
 import controls.MatrixUtils;
 
-//! WORKING IN PROGRESS!
+//! WORK IN PROGRESS!
 
 public class Determinant {
 
