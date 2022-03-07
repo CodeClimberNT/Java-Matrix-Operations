@@ -3,7 +3,7 @@ package operations;
 import controls.MatrixUtils;
 
 //! WORK IN PROGRESS!
-
+// need to redefine (no idea what I did)
 public class Determinant {
 
     public static double laPlace(double[][] matrix) {
